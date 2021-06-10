@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>CURD App with MERN</h1> 
+      <h1>CURD MERN App</h1> 
 
       <label>Food Name</label>
       <input 
