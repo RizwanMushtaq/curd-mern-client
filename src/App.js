@@ -10,7 +10,7 @@ function App() {
   const [foodList, setFoodList] = useState([])
 
   useEffect(()=> {
-    Axios.get("http://localhost:80/read").then((response)=>{
+    Axios.get("https://curd-mern-app.herokuapp.com/read").then((response)=>{
       console.log(response)
       setFoodList(response.data) 
     })
@@ -18,20 +18,20 @@ function App() {
 
   const addToList = () => {
     console.log(foodName + days);
-    Axios.post("http://localhost:80/insert", {
+    Axios.post("https://curd-mern-app.herokuapp.com/insert", {
       foodName: foodName,
       days: days,
     })
   }
 
   const updateFood = (id) => {
-    Axios.put("http://localhost:80/update", {
+    Axios.put("https://curd-mern-app.herokuapp.com/update", {
       id:id,
       newFoodName: newFoodName,
     })
   }
   const deleteFood = (id) => {
-    Axios.delete(`http://localhost:80/delete/${id}`)
+    Axios.delete(`https://curd-mern-app.herokuapp.com/delete/${id}`)
   }
 
   return (
